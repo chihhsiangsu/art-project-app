@@ -4,7 +4,7 @@ export function NavigationBar() {
   return (
     <FixedFlexRow>
       <StyledLink href="/">Spotlight</StyledLink>
-      <StyledLink href="/art-pieces">Art Pieces</StyledLink>
+      <StyledLink href="/art-pieces">Gallery</StyledLink>
       <StyledLink href="/">Favorites</StyledLink>
     </FixedFlexRow>
   );
