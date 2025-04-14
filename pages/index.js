@@ -1,12 +1,13 @@
+import { NavigationBar } from "@/Components/NavigationBar/NavigationBar";
 import SpotLightPiece from "@/Components/SpotlightPiece/SpotlightPiece";
-import Link from "next/link";
+import { StyledHeading } from "@/Components/StyledComponents";
 
 export default function HomePage() {
   return (
     <div>
-      <h1>Piece of The Day</h1>
+      <StyledHeading>Piece of The Day</StyledHeading>
       <SpotLightPiece />
-      <Link href="art-pieces">Art Gallery</Link>
+      <NavigationBar />
     </div>
   );
 }
