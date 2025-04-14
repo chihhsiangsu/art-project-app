@@ -1,4 +1,4 @@
-import { Card, Image, Info, Title, Artist } from ".";
+import { Card, Image, Info, Title, Artist } from "../StyledComponents";
 
 export function ArtPiecePreview({ piece }) {
   return (
