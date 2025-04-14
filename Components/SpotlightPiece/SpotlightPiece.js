@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { ArtPiecePreview } from "../ArtPiecesPreview/ArtPiecePreview";
 
-export default function ArtPiecesList() {
-  const [artPieces, setArtPieces] = useState([]);
+export default function SpotLightPiece() {
+  const [spotlightPieces, setsSpotlightPieces] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -11,7 +11,8 @@ export default function ArtPiecesList() {
       try {
         const response = await fetch("https://example-apis.vercel.app/api/art");
         const data = await response.json();
-        setArtPieces(data);
+        const randomIndex = Math.floor(Math.random() * data.length);
+        setsSpotlightPieces(data[randomIndex]);
         setIsLoading(false);
       } catch (err) {
         setError(err);
@@ -26,9 +27,7 @@ export default function ArtPiecesList() {
 
   return (
     <>
-      {artPieces.map((piece) => (
-        <ArtPiecePreview key={piece.slug} piece={piece} />
-      ))}
+      <ArtPiecePreview piece={spotlightPieces} />
     </>
   );
 }
