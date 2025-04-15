@@ -65,6 +65,6 @@ export const StyledLink = styled(Link)`
   cursor: pointer;
 `;
 
-export const StyleBody = styled.body`
+export const StyledBody = styled.body`
   margin-bottom: 80px;
 `;

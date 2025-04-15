@@ -26,10 +26,10 @@ export default function ArtPiecesList() {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <StyleBody>
+    <>
       {artPieces.map((piece) => (
         <ArtPiecePreview key={piece.slug} piece={piece} />
       ))}
-    </StyleBody>
+    </>
   );
 }
