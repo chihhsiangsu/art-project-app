@@ -4,10 +4,10 @@ import { StyledBody, StyledHeading } from "@/Components/StyledComponents";
 
 export default function HomePage() {
   return (
-    <StyledBody>
+    <>
       <StyledHeading>Piece of The Day</StyledHeading>
       <SpotLightPiece />
       <NavigationBar />
-    </StyledBody>
+    </>
   );
 }
