@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { ArtPiecePreview } from "../ArtPiecesPreview/ArtPiecePreview";
-import { StyleBody } from "../StyledComponents";
 
 export default function ArtPiecesList() {
   const [artPieces, setArtPieces] = useState([]);
@@ -12,6 +11,7 @@ export default function ArtPiecesList() {
       try {
         const response = await fetch("https://example-apis.vercel.app/api/art");
         const data = await response.json();
+        console.log(data);
         setArtPieces(data);
         setIsLoading(false);
       } catch (err) {
