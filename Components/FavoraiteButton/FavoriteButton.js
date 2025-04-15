@@ -1,12 +1,15 @@
+import { useFavoritesStore } from "@/GlobalStore/useFavorateStore";
 import { StyledFavoriteIcon } from "../StyledComponents";
-import { useState } from "react";
 
-export default function FavoriteIcon({}) {
-  const [clicked, setClicked] = useState(false);
+export default function FavoriteIcon({ slug }) {
+  const favorites = useFavoritesStore((state) => state.favorites);
+  const toggleFavorite = useFavoritesStore((state) => state.toggleFavorite);
+  const isFavorite = favorites.includes(slug);
+
   return (
     <StyledFavoriteIcon
-      src={clicked ? "/favorite-active.svg" : "/favorite.svg"}
-      onClick={() => setClicked(!clicked)}
+      src={isFavorite ? "/favorite-active.svg" : "/favorite.svg"}
+      onClick={() => toggleFavorite(slug)}
     />
   );
 }
