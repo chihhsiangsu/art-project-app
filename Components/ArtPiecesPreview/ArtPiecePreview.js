@@ -13,7 +13,7 @@ export function ArtPiecePreview({ piece }) {
   return (
     <StyledCard>
       <FavoriteContainer>
-        <FavoriteIcon />
+        <FavoriteIcon slug={piece.slug} />
       </FavoriteContainer>
       <StyledImage src={piece.imageSource} alt={piece.name} />
       <StyledInfo>
