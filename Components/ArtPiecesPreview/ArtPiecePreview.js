@@ -9,11 +9,14 @@ import {
 } from "../StyledComponents";
 import FavoriteIcon from "../FavoraiteButton/FavoriteButton";
 
-export function ArtPiecePreview({ piece }) {
+export function ArtPiecePreview({ piece, toggleClick, isClicked }) {
   return (
     <StyledCard>
       <FavoriteContainer>
-        <FavoriteIcon />
+        <FavoriteIcon
+          isClicked={isClicked}
+          onClick={() => toggleClick(piece.slug)}
+        />
       </FavoriteContainer>
       <StyledImage src={piece.imageSource} alt={piece.name} />
       <StyledInfo>
