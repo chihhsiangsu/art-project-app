@@ -1,4 +1,10 @@
-import Image from "next/image";
+import {
+  StyledArtist,
+  StyledCard,
+  StyledHeading,
+  StyledImage,
+  StyledInfo,
+} from "@/Components/StyledComponents";
 import Link from "next/link";
 import { useRouter } from "next/router.js";
 import { useState, useEffect } from "react";
@@ -33,8 +39,16 @@ export default function ArtPieceDetail() {
   const { artist, colors, genre, imageSource, name, year } = piece;
 
   return (
-    <>
-      <h1>{name}</h1>
-    </>
+    <StyledCard>
+      <StyledImage src={imageSource} alt={name} />
+      <StyledHeading>{name}</StyledHeading>
+      <StyledInfo>
+        <h2>Year: {year}</h2>
+        <h3>Genre: {genre}</h3>
+        <h3>{colors}</h3>
+        <StyledArtist>by {artist}</StyledArtist>
+        <Link href="/art-pieces">Back to Gallery</Link>
+      </StyledInfo>
+    </StyledCard>
   );
 }
