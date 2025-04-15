@@ -1,7 +1,12 @@
-import Image from "next/image";
+import { StyledFavoriteIcon } from "../StyledComponents";
+import { useState } from "react";
 
 export default function FavoriteIcon() {
+  const [clicked, setClicked] = useState(false);
   return (
-    <Image src="/favicon.ico" width={40} height={40} alt="Favorite Icon" />
+    <StyledFavoriteIcon
+      src={clicked ? "/favorite-active.svg" : "/favorite.svg"}
+      onClick={() => setClicked(!clicked)}
+    />
   );
 }

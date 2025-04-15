@@ -75,3 +75,8 @@ export const FavoriteContainer = styled.div`
   bottom: 10px;
   right: 10px;
 `;
+
+export const StyledFavoriteIcon = styled.img`
+  width: 40px;
+  height: 40px;
+`;

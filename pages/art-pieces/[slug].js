@@ -45,7 +45,19 @@ export default function ArtPieceDetail() {
       <StyledInfo>
         <h2>Year: {year}</h2>
         <h3>Genre: {genre}</h3>
-        <h3>Colors: {colors}</h3>
+        <h3>Colors:</h3>
+        <div style={{ display: "flex", gap: "8px", margin: "1rem 0" }}>
+          {colors.map((color, index) => (
+            <div
+              key={index}
+              style={{
+                width: "24px",
+                height: "24px",
+                backgroundColor: color,
+              }}
+            />
+          ))}
+        </div>
         <StyledArtist>by {artist}</StyledArtist>
         <Link href="/art-pieces">Back to Gallery</Link>
       </StyledInfo>
