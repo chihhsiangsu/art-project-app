@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Link from "next/link";
 
 export const StyledCard = styled.div`
+  position: relative;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
@@ -67,4 +68,10 @@ export const StyledLink = styled(Link)`
 
 export const StyledBody = styled.body`
   margin-bottom: 80px;
+`;
+
+export const FavoriteContainer = styled.div`
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 `;

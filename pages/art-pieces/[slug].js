@@ -45,7 +45,7 @@ export default function ArtPieceDetail() {
       <StyledInfo>
         <h2>Year: {year}</h2>
         <h3>Genre: {genre}</h3>
-        <h3>{colors}</h3>
+        <h3>Colors: {colors}</h3>
         <StyledArtist>by {artist}</StyledArtist>
         <Link href="/art-pieces">Back to Gallery</Link>
       </StyledInfo>
