@@ -9,11 +9,15 @@ import {
 } from "../StyledComponents";
 import FavoriteIcon from "../FavoraiteButton/FavoriteButton";
 
-export function ArtPiecePreview({ piece }) {
+export function ArtPiecePreview({ piece, isFavorite, onToggleFavorite }) {
   return (
     <StyledCard>
       <FavoriteContainer>
-        <FavoriteIcon></FavoriteIcon>
+        <FavoriteIcon
+          piece={piece.slug}
+          isFavorite={isFavorite}
+          onToggleFavorite={onToggleFavorite}
+        ></FavoriteIcon>
       </FavoriteContainer>
       <StyledImage src={piece.imageSource} alt={piece.name} />
       <StyledInfo>

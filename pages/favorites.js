@@ -1,7 +1,7 @@
+import { ArtPiecePreview } from "@/Components/ArtPiecesPreview/ArtPiecePreview";
 import { useEffect, useState } from "react";
-import { ArtPiecePreview } from "../ArtPiecesPreview/ArtPiecePreview";
 
-export default function ArtPiecesList({}) {
+export default function ArtPiecesList({ onToggleFavorite, favoritePieces }) {
   const [artPieces, setArtPieces] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -28,7 +28,12 @@ export default function ArtPiecesList({}) {
   return (
     <>
       {artPieces.map((piece) => (
-        <ArtPiecePreview key={piece.slug} piece={piece} />
+        <ArtPiecePreview
+          key={piece.slug}
+          piece={piece}
+          isFavorite={favoritePieces.some((fav) => fav.slug === piece.slug)}
+          onToggleFavorite={onToggleFavorite}
+        />
       ))}
     </>
   );
