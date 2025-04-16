@@ -3,7 +3,7 @@ import { persist } from "zustand/middleware";
 
 export const useFavoritesStore = create(
   persist(
-    (set, get) => ({
+    (set) => ({
       favorites: [],
       toggleFavorite: (slug) =>
         set((state) => ({
