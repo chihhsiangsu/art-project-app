@@ -8,6 +8,7 @@ export default function FavoriteIcon({ slug }) {
 
   return (
     <StyledFavoriteIcon
+      data-testid="icon-testing"
       src={isFavorite ? "/favorite-active.svg" : "/favorite.svg"}
       onClick={() => toggleFavorite(slug)}
     />

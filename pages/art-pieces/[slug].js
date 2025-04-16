@@ -1,7 +1,6 @@
 import {
   StyledArtist,
   StyledCard,
-  StyledHeading,
   StyledImage,
   StyledInfo,
 } from "@/Components/StyledComponents";
@@ -40,13 +39,25 @@ export default function ArtPieceDetail() {
 
   return (
     <StyledCard>
-      <StyledImage src={imageSource} alt={name} />
-      <StyledHeading>{name}</StyledHeading>
-      <StyledInfo>
-        <h2>Year: {year}</h2>
-        <h3>Genre: {genre}</h3>
-        <h3>Colors:</h3>
-        <div style={{ display: "flex", gap: "8px", margin: "1rem 0" }}>
+      <StyledImage style={{ height: "450px" }} src={imageSource} alt={name} />
+      <h3 style={{ textAlign: "center", margin: "px" }}>{name}</h3>
+      <StyledArtist style={{ textAlign: "center" }}>by {artist}</StyledArtist>
+      <StyledInfo style={{ textAlign: "center", margin: "0px" }}>
+        <h5 style={{ textAlign: "center", margin: "0px" }}>Year: {year}</h5>
+        <h5 style={{ textAlign: "center", margin: "0px" }}>Genre: {genre}</h5>
+        <h5
+          style={{ textAlign: "center", marginTop: "10px", marginBottom: "0" }}
+        >
+          Colors:
+        </h5>
+        <div
+          style={{
+            display: "flex",
+            gap: "8px",
+            margin: "1rem 0",
+            justifyContent: "center",
+          }}
+        >
           {colors.map((color, index) => (
             <div
               key={index}
@@ -58,7 +69,6 @@ export default function ArtPieceDetail() {
             />
           ))}
         </div>
-        <StyledArtist>by {artist}</StyledArtist>
         <Link href="/art-pieces">Back to Gallery</Link>
       </StyledInfo>
     </StyledCard>

@@ -19,7 +19,9 @@ export function ArtPiecePreview({ piece }) {
       <StyledInfo>
         <StyledTitle>{piece.name}</StyledTitle>
         <StyledArtist>by {piece.artist}</StyledArtist>
-        <Link href={`/art-pieces/${piece.slug}`}>Detail</Link>
+        <Link style={{ color: "grey" }} href={`/art-pieces/${piece.slug}`}>
+          Detail
+        </Link>
       </StyledInfo>
     </StyledCard>
   );
