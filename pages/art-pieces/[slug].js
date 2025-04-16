@@ -1,3 +1,4 @@
+import CommentForm from "@/Components/CommentForm/CommentForm";
 import {
   StyledArtist,
   StyledCard,
@@ -69,7 +70,18 @@ export default function ArtPieceDetail() {
             />
           ))}
         </div>
-        <Link href="/art-pieces">Back to Gallery</Link>
+        <CommentForm />{" "}
+        <Link
+          href="/art-pieces"
+          style={{
+            fontSize: "13px",
+            display: "flex",
+            justifyContent: "right",
+            marginTop: "15px",
+          }}
+        >
+          Back to Gallery
+        </Link>
       </StyledInfo>
     </StyledCard>
   );
