@@ -1,3 +1,4 @@
+import CommentForm from "@/Components/CommentForm/CommentForm";
 import {
   StyledArtist,
   StyledCard,
@@ -39,9 +40,15 @@ export default function ArtPieceDetail() {
 
   return (
     <StyledCard>
-      <StyledImage style={{ height: "450px" }} src={imageSource} alt={name} />
-      <h3 style={{ textAlign: "center", margin: "px" }}>{name}</h3>
-      <StyledArtist style={{ textAlign: "center" }}>by {artist}</StyledArtist>
+      <StyledImage
+        style={{ height: "450px", marginBottom: "15px" }}
+        src={imageSource}
+        alt={name}
+      />
+      <h3 style={{ textAlign: "center", margin: "0px" }}>{name}</h3>
+      <StyledArtist style={{ textAlign: "center", margin: "0px" }}>
+        by {artist}
+      </StyledArtist>
       <StyledInfo style={{ textAlign: "center", margin: "0px" }}>
         <h5 style={{ textAlign: "center", margin: "0px" }}>Year: {year}</h5>
         <h5 style={{ textAlign: "center", margin: "0px" }}>Genre: {genre}</h5>
@@ -54,7 +61,7 @@ export default function ArtPieceDetail() {
           style={{
             display: "flex",
             gap: "8px",
-            margin: "1rem 0",
+            margin: "10px",
             justifyContent: "center",
           }}
         >
@@ -69,7 +76,18 @@ export default function ArtPieceDetail() {
             />
           ))}
         </div>
-        <Link href="/art-pieces">Back to Gallery</Link>
+        <CommentForm />
+        <Link
+          href="/art-pieces"
+          style={{
+            fontSize: "13px",
+            display: "flex",
+            justifyContent: "right",
+            marginTop: "15px",
+          }}
+        >
+          Back to Gallery
+        </Link>
       </StyledInfo>
     </StyledCard>
   );

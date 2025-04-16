@@ -8,6 +8,7 @@ import {
   StyledTitle,
 } from "../StyledComponents";
 import FavoriteIcon from "../FavoraiteButton/FavoriteButton";
+import CommentForm from "../CommentForm/CommentForm";
 
 export function ArtPiecePreview({ piece }) {
   return (

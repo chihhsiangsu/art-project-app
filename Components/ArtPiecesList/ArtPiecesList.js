@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ArtPiecePreview } from "../ArtPiecesPreview/ArtPiecePreview";
 
-export default function ArtPiecesList({}) {
+export default function ArtPiecesList() {
   const [artPieces, setArtPieces] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
