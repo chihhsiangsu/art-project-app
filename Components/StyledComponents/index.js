@@ -56,7 +56,7 @@ export const FixedFlexRow = styled.div`
 
 export const StyledLink = styled(Link)`
   display: inline-block;
-  background-color: #4f46e5;
+  background-color: ${({ $active }) => ($active ? "pink" : "black")};
   color: white;
   text-decoration: none;
   font-size: 1rem;
