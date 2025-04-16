@@ -11,7 +11,7 @@ import FavoriteIcon from "../FavoraiteButton/FavoriteButton";
 
 export function ArtPiecePreview({ piece }) {
   return (
-    <StyledCard>
+    <StyledCard data-testid="art-piece-preview">
       <FavoriteContainer>
         <FavoriteIcon slug={piece.slug} />
       </FavoriteContainer>
